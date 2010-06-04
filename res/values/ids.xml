@@ -1,0 +1,4 @@
+<resources>
+	<item name="user_listing_one_user_view_user_name" type="id"></item>
+	<item name="user_listing_one_user_view_email" type="id"></item>
+</resources>

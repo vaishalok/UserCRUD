@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UserCRUD</string>
+    
+    <string name="urlString">"http://10.0.2.2:3000/Users"</string>
+    
+    
+    <!-- ==============================================================
+    	Strings for shownOnAlertDialog 
+    ================================================================== -->
+	<string name="alertDialogHeadingUnableToConnect">"Unable To Connect"</string>
+	<string name="alertDialogMessageUnableToConnect">"Could not Connect to Server "</string>
+	
+	<!-- ==============================================================
+    	Strings for shownOnProgressDialog 
+    ================================================================== -->
+	<string name="progressDialogMessageSplashScreenRetrievingUserListing">"Retrieving User Listing ... "</string>
+    
+    
+</resources>
