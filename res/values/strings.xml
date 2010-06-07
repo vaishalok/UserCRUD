@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">UserCRUD</string>
     
-    <string name="urlString">"http://10.0.2.2:3000/Users"</string>
+    <string name="urlString">"http://10.0.2.2:3000/users"</string>
     
     
     <!-- ==============================================================
@@ -11,10 +11,18 @@
 	<string name="alertDialogHeadingUnableToConnect">"Unable To Connect"</string>
 	<string name="alertDialogMessageUnableToConnect">"Could not Connect to Server "</string>
 	
+	<string name="alertDialogHeadingError">"Error"</string>
+	
 	<!-- ==============================================================
     	Strings for shownOnProgressDialog 
     ================================================================== -->
 	<string name="progressDialogMessageSplashScreenRetrievingUserListing">"Retrieving User Listing ... "</string>
+	
+	
+	<!-- ==============================================================
+    	Strings for shownOnToast 
+    ================================================================== -->
+	<string name="toastMessageResponseHandlerIStreamIsNull">"Response from server is null "</string>
     
     
 </resources>

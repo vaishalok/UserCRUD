@@ -11,14 +11,14 @@ public class Constants {
 	/**=============================================
 	 * responseHandleBy
 	 *==============================================*/
-	static final int USER_LISTING = 100;
+	public static final int USER_LISTING = 100;
 	
 	
 		
 	/**=============================================
 	 * creatingXMLParser for class
 	 *==============================================*/
-	static final int XML_PARSER_FOR_USERS = 1000;
+	public static final int XML_PARSER_FOR_USERS = 1000;
 	static final int XML_PARSER_FOR_ERRORS = 1001;
 	
 	//modeOfPage 

@@ -17,7 +17,7 @@ import android.util.Log;
 import com.vinsol.UserCRUD.User.User;
 import com.vinsol.UserCRUD.User.UserXMLHandler;
 
-public class CreateXMLParser{
+public class CreateXMLParser {
 	
 	public Object creatingXmlParser(InputStream is, int forWhichClass){
 		

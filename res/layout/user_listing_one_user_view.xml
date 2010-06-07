@@ -10,6 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dip"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:maxLines="1"
@@ -20,7 +21,9 @@
      <TextView 
      	android:id="@+id/EMAIL"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginBottom="5dip" 
         android:textColor="@color/black"
         android:maxLines="1"
         android:textSize="15dip"

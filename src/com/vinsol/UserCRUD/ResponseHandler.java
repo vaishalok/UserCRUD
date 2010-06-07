@@ -55,7 +55,7 @@ class ResponseHandler {
 	                         break;  
 	                     }//end case Constants.USERListing  
 	  
-	                     //case 2 Constants.USER_LISTING_DELETE:  
+/*	                     //case 2 Constants.USER_LISTING_DELETE:  
 	                     case Constants.USER_LISTING_DELETE: {  
 	                         new UserManager().requestServerForUserList(ctx);  
 	                         break;  
@@ -74,7 +74,7 @@ class ResponseHandler {
 	                         }  
 	                         break;  
 	                     }//end case Constants.USER_ADD_DONE:  
-	  
+*/	  
 	                 }//end of switch response handle by  
 	  
 	                 break;  

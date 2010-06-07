@@ -5,7 +5,6 @@ import java.util.HashMap;
 
 import android.app.ListActivity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -22,7 +21,7 @@ public class UserListing extends ListActivity {
 	ListView lv;
 	/**========================================================================   
 	  * method onCreate()   
-	  * ========================================================================*/   
+	  *========================================================================*/   
 	@Override   
 	public void onCreate(Bundle onSavedInstanceState) {   
 	   
@@ -62,9 +61,7 @@ public class UserListing extends ListActivity {
 	}//end method onCreate
 	
 	void backButtonHandler(){
-		Intent i = new Intent(this, Dashboard.class);
 		finish();
-		startActivity(i);
 	}
 
 	
