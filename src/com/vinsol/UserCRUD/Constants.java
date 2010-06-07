@@ -12,11 +12,8 @@ public class Constants {
 	 * responseHandleBy
 	 *==============================================*/
 	public static final int USER_LISTING = 100;
-	public static final int USER_ADD_DONE = 101;
-	public static final int USER_EDIT_DONE = 102;
+	public static final int USER_ADD_OR_EDIT_DONE = 101;	
 	
-	
-		
 	/**=============================================
 	 * creatingXMLParser for class
 	 *==============================================*/

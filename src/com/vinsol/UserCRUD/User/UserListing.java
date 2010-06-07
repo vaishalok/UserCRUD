@@ -94,7 +94,7 @@ public class UserListing extends ListActivity {
 				return true;
 			}
 			case R.id.USER_LISTING_CONTEXT_MENU_EDIT_USER: {
-				//new UserManager().gotoEditUserPage();
+				new UserManager().gotoEditUserPage(this, positionOfUserInListView);
 				return true;
 			}
 			case R.id.USER_LISTING_CONTEXT_MENU_DELETE_USER: {

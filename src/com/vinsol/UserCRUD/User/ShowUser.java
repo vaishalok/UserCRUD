@@ -64,7 +64,7 @@ public class ShowUser extends Activity implements OnClickListener {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event){
 	    if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-	    	new UserManager().showUserListing(this);
+	    	new UserManager().requestServerForUserList(this);
 	        return true;
 	    }
 	    return super.onKeyDown(keyCode, event);

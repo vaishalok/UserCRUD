@@ -84,7 +84,7 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 		
 		switch(id){
 			case R.id.add_or_edit_user_button_done:
-				doneButtonHandler(Constants.PAGE_ADD);
+				doneButtonHandler();
 				break; 
 				
 		}//end of Switch
@@ -94,7 +94,7 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 	/**========================================================================   
 	  * method doneButtonHandler   
 	  *========================================================================*/  
-	void doneButtonHandler(int whichDone){
+	void doneButtonHandler(){
 		
 		String userName = (userNameEditText.getText()).toString();
 		String email = (emailEditText.getText()).toString();
@@ -112,9 +112,9 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 			nameValuePairs.add(nv1);
 			nameValuePairs.add(nv2);
 			
-			if(whichDone == Constants.PAGE_ADD){
+			if(modeOfPage == Constants.PAGE_ADD){
 				sendAddRequestToServer(nameValuePairs);
-			} else if(whichDone == Constants.PAGE_EDIT) {
+			} else if(modeOfPage == Constants.PAGE_EDIT) {
 				NameValuePair nv0 = new BasicNameValuePair("_method", "put");
 				nameValuePairs.add(nv0);
 			
@@ -132,7 +132,7 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 		String shownOnProgressDialog = getString(R.string.progressDialogMessageAddOrEditUserSavingUser);
 		String urlString = getString(R.string.urlString) + ".xml";
 		
-		RequestSentToServerAsyncTask requestSentToServerAsyncTaskObject = new RequestSentToServerAsyncTask(this, Constants.POST_REQUEST, Constants.USER_ADD_DONE, shownOnProgressDialog, nameValuePairs);
+		RequestSentToServerAsyncTask requestSentToServerAsyncTaskObject = new RequestSentToServerAsyncTask(this, Constants.POST_REQUEST, Constants.USER_ADD_OR_EDIT_DONE, shownOnProgressDialog, nameValuePairs);
 		requestSentToServerAsyncTaskObject.execute(urlString);
 		
 		//after this response of server will be handled by ResponseHandler 
@@ -145,9 +145,9 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 	void sendEditRequestToServer(String idOfUser, ArrayList<NameValuePair> nameValuePairs){
 		
 		String shownOnProgressDialog = getString(R.string.progressDialogMessageAddOrEditUserSavingUser);
-		String urlString = getString(R.string.urlString) + ".xml";
+		String urlString = getString(R.string.urlString) + "/" + idOfUser + ".xml";
 		
-		RequestSentToServerAsyncTask requestSentToServerAsyncTaskObject = new RequestSentToServerAsyncTask(this, Constants.POST_REQUEST, Constants.USER_ADD_DONE, shownOnProgressDialog, nameValuePairs);
+		RequestSentToServerAsyncTask requestSentToServerAsyncTaskObject = new RequestSentToServerAsyncTask(this, Constants.POST_REQUEST, Constants.USER_ADD_OR_EDIT_DONE, shownOnProgressDialog, nameValuePairs);
 		requestSentToServerAsyncTaskObject.execute(urlString);
 		
 		//after this response of server will be handled by ResponseHandler 
@@ -159,7 +159,7 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event){
 	    if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-	    	new UserManager().showUserListing(this);
+	    	new UserManager().requestServerForUserList(this);
 	        return true;
 	    }
 	    return super.onKeyDown(keyCode, event);

@@ -53,8 +53,29 @@ class ResponseHandler {
 	                             new UserManager().showUserListing(ctx);  
 	                         }  
 	                         break;  
-	                     }//end case Constants.USERListing  
-	  
+	                     }//end case Constants.USERListing 
+	                     
+	                     //case 2 Constants.NQO_GRANT_ADD_DONE:
+	                     case Constants.USER_ADD_OR_EDIT_DONE:{
+	                    	 if(iStream == null){
+	                    		 Toast t = Toast.makeText(ctx, ctx.getString(R.string.toastMessageResponseHandlerIStreamIsNull), Toast.LENGTH_LONG);
+	                    		 t.show();
+	                    	 }else{
+	                    		 new UserManager().saveUserListInStaticVariable(ctx, iStream);
+	                    		 new UserManager().gotoShowUserPage(ctx, 0);
+	                    	 }
+	                    	 break;
+	                     }//end of case 5
+							
+/*							//case 6 Constants.NQO_GRANT_SHOW_LISTING_DELETE:
+							case Constants.NQO_GRANT_SHOW_LISTING_DELETE: {
+								int positionOfDeletedItemInArrayList = NQOGrantShowListing.getPositionOfDeletedItemInArrayList();
+								NQOGrantManager.deleteOneItemFromArrayList(positionOfDeletedItemInArrayList);
+								new NQOGrantManager().showListingWithoutSendingRequest(ctx);
+								//new NQOGrantManager().showListingBeforeSendingRequest(ctx);
+								break;
+							}//end of case 6
+*/							
 /*	                     //case 2 Constants.USER_LISTING_DELETE:  
 	                     case Constants.USER_LISTING_DELETE: {  
 	                         new UserManager().requestServerForUserList(ctx);  
