@@ -13,6 +13,7 @@ public class Constants {
 	 *==============================================*/
 	public static final int USER_LISTING = 100;
 	public static final int USER_ADD_OR_EDIT_DONE = 101;	
+	public static final int USER_LISTING_DELETE = 102;
 	
 	/**=============================================
 	 * creatingXMLParser for class

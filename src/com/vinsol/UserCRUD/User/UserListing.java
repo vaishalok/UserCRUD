@@ -3,8 +3,13 @@ package com.vinsol.UserCRUD.User;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
+import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -17,7 +22,9 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 
+import com.vinsol.UserCRUD.Constants;
 import com.vinsol.UserCRUD.R;
+import com.vinsol.UserCRUD.RequestSentToServerAsyncTask;
 
 public class UserListing extends ListActivity {
 	
@@ -76,7 +83,7 @@ public class UserListing extends ListActivity {
 		menu.setHeaderTitle("Context Menu");
 		menu.add(0, R.id.USER_LISTING_CONTEXT_MENU_SHOW_USER, 0, "Show");
 		menu.add(0, R.id.USER_LISTING_CONTEXT_MENU_EDIT_USER, 0,  "Edit");
-		menu.add(0, R.id.USER_LISTING_CONTEXT_MENU_EDIT_USER, 0,  "Delete");
+		menu.add(0, R.id.USER_LISTING_CONTEXT_MENU_DELETE_USER, 0,  "Delete");
 	}//end method onCreateContextMenu
 		
 	/**========================================================================   
@@ -86,7 +93,7 @@ public class UserListing extends ListActivity {
 	public boolean onContextItemSelected(MenuItem item) {
 		
 		AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
-		int positionOfUserInListView = info.position;
+		final int positionOfUserInListView = info.position;
 		
 		switch (item.getItemId()) {
 			case R.id.USER_LISTING_CONTEXT_MENU_SHOW_USER: {
@@ -98,6 +105,23 @@ public class UserListing extends ListActivity {
 				return true;
 			}
 			case R.id.USER_LISTING_CONTEXT_MENU_DELETE_USER: {
+				
+				AlertDialog.Builder builder = new AlertDialog.Builder(this);
+				builder.setMessage("Are you sure?")
+				       .setCancelable(false)
+				       .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+				           public void onClick(DialogInterface dialog, int id) {
+				        	   String idOfUser = userArrayList.get(positionOfUserInListView).getId();
+				        	   deleteUser(idOfUser);	
+				           }
+				       })
+				       .setNegativeButton("No", new DialogInterface.OnClickListener() {
+				           public void onClick(DialogInterface dialog, int id) {
+				                dialog.cancel();
+				           }
+				       });
+				AlertDialog alert = builder.create();
+				alert.show();
 				return true;
 			}
 			default: {
@@ -105,6 +129,26 @@ public class UserListing extends ListActivity {
 			}
 		}//end switch
 	}//end method onContextItemSelected
+	
+	
+	/**===============================================================   
+	  * method deleteUser  
+	  * ==============================================================*/   
+	void deleteUser(String idOfUser){
+		
+		ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+		NameValuePair nv1 = new BasicNameValuePair("_method", "delete");
+		nameValuePairs.add(nv1);
+		
+		String shownOnProgressDialog = getString(R.string.progressDialogMessageUserListingDeletingUser);
+		
+		String urlString = getString(R.string.urlString) + "/" + idOfUser + ".xml" ;
+		
+		RequestSentToServerAsyncTask requestSentToServerTaskLogout = new RequestSentToServerAsyncTask(this, Constants.POST_REQUEST, Constants.USER_LISTING_DELETE, shownOnProgressDialog, nameValuePairs);
+		requestSentToServerTaskLogout.execute(urlString);
+		
+		//after this ResponseHandler will deal with response
+	}
 	
 	/**========================================================================   
 	  * method backButtonHandler   

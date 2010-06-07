@@ -66,23 +66,14 @@ class ResponseHandler {
 	                    	 }
 	                    	 break;
 	                     }//end of case 5
-							
-/*							//case 6 Constants.NQO_GRANT_SHOW_LISTING_DELETE:
-							case Constants.NQO_GRANT_SHOW_LISTING_DELETE: {
-								int positionOfDeletedItemInArrayList = NQOGrantShowListing.getPositionOfDeletedItemInArrayList();
-								NQOGrantManager.deleteOneItemFromArrayList(positionOfDeletedItemInArrayList);
-								new NQOGrantManager().showListingWithoutSendingRequest(ctx);
-								//new NQOGrantManager().showListingBeforeSendingRequest(ctx);
-								break;
-							}//end of case 6
-*/							
-/*	                     //case 2 Constants.USER_LISTING_DELETE:  
+													
+	                     //case 2 Constants.USER_LISTING_DELETE:  
 	                     case Constants.USER_LISTING_DELETE: {  
 	                         new UserManager().requestServerForUserList(ctx);  
 	                         break;  
 	                     }//end case Constants.USER_LISTING_DELETE      
 	  
-	  
+	                     /*	  
 	                     //case 3 Constants.USER_ADD_DONE:  
 	                     case Constants.USER_ADD_DONE:{  
 	                         if(iStream == null){  

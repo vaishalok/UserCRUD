@@ -21,6 +21,7 @@
     ================================================================== -->
 	<string name="progressDialogMessageSplashScreenRetrievingUserListing">"Retrieving User Listing ... "</string>
 	<string name="progressDialogMessageAddOrEditUserSavingUser">"Saving User ... "</string>
+	<string name="progressDialogMessageUserListingDeletingUser">"Deleting User ... "</string>
 	
 	
 	<!-- ==============================================================

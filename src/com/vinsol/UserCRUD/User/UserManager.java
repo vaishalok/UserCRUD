@@ -101,5 +101,5 @@ public class UserManager {
 		((Activity)ctx).finish();
 		ctx.startActivity(intent);
 	}//end method gotoEditUserPage
-    
+	
 }//end class UserManager

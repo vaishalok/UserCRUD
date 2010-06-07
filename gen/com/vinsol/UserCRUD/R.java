@@ -56,11 +56,12 @@ public final class R {
     ================================================================== 
          */
         public static final int progressDialogMessageSplashScreenRetrievingUserListing=0x7f060007;
+        public static final int progressDialogMessageUserListingDeletingUser=0x7f060009;
         /**  ==============================================================
     	Strings for shownOnToast 
     ================================================================== 
          */
-        public static final int toastMessageResponseHandlerIStreamIsNull=0x7f060009;
+        public static final int toastMessageResponseHandlerIStreamIsNull=0x7f06000a;
         public static final int urlString=0x7f060001;
     }
 }
