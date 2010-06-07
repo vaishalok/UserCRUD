@@ -80,6 +80,7 @@ public class UserListing extends ListActivity {
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
+		
 		menu.setHeaderTitle("Context Menu");
 		menu.add(0, R.id.USER_LISTING_CONTEXT_MENU_SHOW_USER, 0, "Show");
 		menu.add(0, R.id.USER_LISTING_CONTEXT_MENU_EDIT_USER, 0,  "Edit");

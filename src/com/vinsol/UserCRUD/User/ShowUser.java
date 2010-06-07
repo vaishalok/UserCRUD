@@ -68,7 +68,5 @@ public class ShowUser extends Activity implements OnClickListener {
 	        return true;
 	    }
 	    return super.onKeyDown(keyCode, event);
-	}//end of onKeyDown	
-	
-	
+	}//end of onKeyDown		
 }//end class ShowUser

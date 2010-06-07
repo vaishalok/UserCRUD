@@ -69,6 +69,15 @@ public class UserManager {
 		ctx.startActivity(intent);
 	}//end method showUserListing
 	
+	/**===============================================================   
+	  * method gotoShowUserPage   
+	  * ==============================================================*/   
+	public void gotoShowUserPage(Context ctx, int positionOfUserInList){
+		Intent intent = new Intent(ctx, ShowUser.class);
+		intent.putExtra(Constants.POSITION_OF_USER_IN_LIST, positionOfUserInList);
+		((Activity)ctx).finish();
+		ctx.startActivity(intent);
+	}//end method gotoShowUserPage
 	
 	/**===============================================================   
 	  * method gotoAddUserPage   
@@ -81,17 +90,6 @@ public class UserManager {
 	}//end method gotoAddUserPage
 	
 	/**===============================================================   
-	  * method gotoShowUserPage   
-	  * ==============================================================*/   
-	public void gotoShowUserPage(Context ctx, int positionOfUserInList){
-		Intent intent = new Intent(ctx, ShowUser.class);
-		intent.putExtra(Constants.POSITION_OF_USER_IN_LIST, positionOfUserInList);
-		((Activity)ctx).finish();
-		ctx.startActivity(intent);
-	}//end method gotoAddUserPage
-	
-
-	/**===============================================================   
 	  * method gotoEditUserPage   
 	  * ==============================================================*/   
 	public void gotoEditUserPage(Context ctx, int positionOfUserInList){
@@ -101,5 +99,4 @@ public class UserManager {
 		((Activity)ctx).finish();
 		ctx.startActivity(intent);
 	}//end method gotoEditUserPage
-	
 }//end class UserManager

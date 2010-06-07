@@ -4,8 +4,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ClientSideValidation{
-	
-	//validateEmail
+	/**===================================================
+	 * method validateEmail
+	 *====================================================*/
 	boolean validateEmail(String email){
 		
 		boolean isValid = false; 
@@ -17,9 +18,11 @@ public class ClientSideValidation{
 		isValid = m.matches();
 	      
 		return isValid;
-	}//end of validateEmail
+	}//end method validateEmail
 	
-	//validateString
+	/**===================================================
+	 * method validateString
+	 *====================================================*/
 	boolean validateString(String string){
 		boolean isValid;
 		if(string == null || string.equalsIgnoreCase("")){
@@ -28,10 +31,12 @@ public class ClientSideValidation{
 			isValid = true;
 		} 
 		return isValid;
-	}//end of validateString
+	}//end method validateString
 	
 	
-	//validateLoginForm
+	/**===================================================
+	 * method validateUserAddOrEditForm
+	 *====================================================*/
 	public boolean validateUserAddOrEditForm(String userName, String email){
 		
 		boolean isUserAddOrEditFormValid = false; 
@@ -40,8 +45,5 @@ public class ClientSideValidation{
 			isUserAddOrEditFormValid = true;
 		}
 		return isUserAddOrEditFormValid;
-	}//end of validateLoginForm
-	
-
-	
+	}//end method validateUserAddOrEditForm	
 } //end of class ClientSideValidation

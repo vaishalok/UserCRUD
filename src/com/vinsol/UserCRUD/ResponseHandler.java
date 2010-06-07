@@ -55,7 +55,7 @@ class ResponseHandler {
 	                         break;  
 	                     }//end case Constants.USERListing 
 	                     
-	                     //case 2 Constants.NQO_GRANT_ADD_DONE:
+	                     //case 2 Constants.USER_ADD_OR_EDIT_DONE:
 	                     case Constants.USER_ADD_OR_EDIT_DONE:{
 	                    	 if(iStream == null){
 	                    		 Toast t = Toast.makeText(ctx, ctx.getString(R.string.toastMessageResponseHandlerIStreamIsNull), Toast.LENGTH_LONG);
@@ -65,28 +65,13 @@ class ResponseHandler {
 	                    		 new UserManager().gotoShowUserPage(ctx, 0);
 	                    	 }
 	                    	 break;
-	                     }//end of case 5
+	                     }//end case USER_ADD_OR_EDIT_DONE
 													
 	                     //case 2 Constants.USER_LISTING_DELETE:  
 	                     case Constants.USER_LISTING_DELETE: {  
 	                         new UserManager().requestServerForUserList(ctx);  
 	                         break;  
-	                     }//end case Constants.USER_LISTING_DELETE      
-	  
-	                     /*	  
-	                     //case 3 Constants.USER_ADD_DONE:  
-	                     case Constants.USER_ADD_DONE:{  
-	                         if(iStream == null){  
-	                             Toast t = Toast.makeText(ctx, ctx.getString(R.string.toastMessageResponseHandlerIStreamIsNull), Toast.LENGTH_LONG);  
-	                             t.show();  
-	                         }else{  
-	                             new UserManager().saveUserListInStaticVariable(ctx, iStream);  
-
-	                             new UserManager().showUserFromList(ctx, 0);  
-	                         }  
-	                         break;  
-	                     }//end case Constants.USER_ADD_DONE:  
-*/	  
+	                     }//end case USER_LISTING_DELETE:      
 	                 }//end of switch response handle by  
 	  
 	                 break;  
@@ -94,10 +79,8 @@ class ResponseHandler {
 	             }//end of case 200 & 201  
 	  
 	             //case Status code == 422  
-	             case 422:{  
-	 
+	             case 422:{  	 
 	                 Object arrayOfErrorsObject = new CreateXMLParser().creatingXmlParser(iStream, Constants.XML_PARSER_FOR_ERRORS);  
-	  
 	                 ArrayList<String> arrayOfErrors = (ArrayList<String>)arrayOfErrorsObject;  
 	  
 	                 String message="";  
@@ -108,7 +91,7 @@ class ResponseHandler {
 	                 String headingOfAlertDialog = ctx.getString(R.string.alertDialogHeadingError);  
 	                 new ShowAlertDialog(ctx, headingOfAlertDialog, message).showDialog();  
 	                 break;  
-	             }  
+	             }//end case 422:  
 	         }  
 	     }else if(exception != null){  
 	         new ShowAlertDialog(ctx, ctx.getString(R.string.alertDialogHeadingUnableToConnect), ctx.getString(R.string.alertDialogMessageUnableToConnect)).showDialog();  

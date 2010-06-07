@@ -19,6 +19,9 @@ import com.vinsol.UserCRUD.User.UserXMLHandler;
 
 public class CreateXMLParser {
 	
+	/**===================================================
+	 * method creatingXMLPareser
+	 *====================================================*/
 	public Object creatingXmlParser(InputStream is, int forWhichClass){
 		
 		SAXParserFactory spf = SAXParserFactory.newInstance();
@@ -36,8 +39,7 @@ public class CreateXMLParser {
 		
 		switch(forWhichClass){
 		
-		
-			 //case 2 Constants.XML_PARSER_FOR_USERS:   
+			 //case 1 Constants.XML_PARSER_FOR_USERS:   
 			 case Constants.XML_PARSER_FOR_USERS: {   
 			   
 			     ArrayList<User> arrayOfUsers = null;   
@@ -59,7 +61,7 @@ public class CreateXMLParser {
 			 }//end case Constants.XML_PARSER_FOR_USERS
 
 			
-			//case 3 Constants.XML_PARSER_FOR_ERRORS:
+			//case 2 Constants.XML_PARSER_FOR_ERRORS:
 			case Constants.XML_PARSER_FOR_ERRORS: {
 				
 				ArrayList<String> arrayOfErrors = null;

@@ -23,7 +23,6 @@ import com.vinsol.UserCRUD.ShowAlertDialog;
 public class AddOrEditUser extends Activity implements OnClickListener {
 	
 	int modeOfPage;
-	int positionOfUserInListWhenEditing;
 	
 	String idOfUserWhenEditing;
 	
@@ -41,8 +40,7 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 		setContentView(R.layout.add_or_edit_user);  
 		
 		modeOfPage = getIntent().getIntExtra(Constants.MODE_OF_PAGE, Constants.PAGE_ADD);
-		//positionOfListItem = getIntent().getIntExtra("positionOfSelectedListItem", 0);
-               
+		      
         userNameEditText = (EditText)findViewById(R.id.add_or_edit_user_edit_text_user_name);
         
         emailEditText = (EditText)findViewById(R.id.add_or_edit_user_edit_text_email);
@@ -51,8 +49,7 @@ public class AddOrEditUser extends Activity implements OnClickListener {
         doneButton.setOnClickListener(this);
         
         if(modeOfPage == Constants.PAGE_EDIT){
-			
-        	positionOfUserInListWhenEditing = getIntent().getIntExtra(Constants.POSITION_OF_USER_IN_LIST, 0);
+			int positionOfUserInListWhenEditing = getIntent().getIntExtra(Constants.POSITION_OF_USER_IN_LIST, 0);
         	fillEditTextsOfBodyForEdit(positionOfUserInListWhenEditing);
 			
 			doneButton.setText("Edit");
@@ -151,7 +148,7 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 		requestSentToServerAsyncTaskObject.execute(urlString);
 		
 		//after this response of server will be handled by ResponseHandler 
-	}
+	}//end method sendEditRequestToServer
 	
 	/**========================================================================   
 	  * method onKeyDown()   
@@ -163,8 +160,5 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 	        return true;
 	    }
 	    return super.onKeyDown(keyCode, event);
-	}//end of onKeyDown	
-	
-
-		
+	}//end of onKeyDown			
 }//end class AddOrEditUser
