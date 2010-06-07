@@ -5,8 +5,11 @@ import java.util.HashMap;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.Window;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -19,6 +22,7 @@ public class UserListing extends ListActivity {
 	
 	Context ctx;
 	ListView lv;
+	
 	/**========================================================================   
 	  * method onCreate()   
 	  *========================================================================*/   
@@ -60,9 +64,37 @@ public class UserListing extends ListActivity {
 		}  
 	}//end method onCreate
 	
+	/**========================================================================   
+	  * method backButtonHandler   
+	  *========================================================================*/   
 	void backButtonHandler(){
 		finish();
-	}
+	}//end method backButtonHandler
 
 	
-}
+	/**========================================================================   
+	  * method onCreateOptionMenu
+	  * Creates the menu items    
+	  *========================================================================*/   
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    menu.add(0, R.id.USER_LISTING_OPTION_MENU_NEW_USER, 0, "New User");
+	    return true;
+	}//end method onCreateOptionMenu
+
+	
+	/**========================================================================   
+	  * method onOptionsItemSelected
+	  * Handles item selections  
+	  *========================================================================*/   
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case R.id.USER_LISTING_OPTION_MENU_NEW_USER:
+	        Intent intent = new Intent(this, AddOrEditUser.class);
+	        finish();
+	        startActivity(intent);
+	        return true;
+	    }
+	    return false;
+	}//end method onOptionsItemSelected
+	
+}//end class UserListing

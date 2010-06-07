@@ -4,6 +4,7 @@
       android:versionCode="1"
       android:versionName="1.0">
     <application android:icon="@drawable/icon" android:label="@string/app_name">
+        
         <activity 
         	android:name=".SplashScreen"
             android:label="@string/app_name"
@@ -16,9 +17,14 @@
         
         <activity 
         	android:name="com.vinsol.UserCRUD.User.UserListing"
-            android:label="@string/app_name"
             android:screenOrientation="portrait">
         </activity>
+        
+        <activity 
+        	android:name="com.vinsol.UserCRUD.User.AddOrEditUser"
+            android:screenOrientation="portrait">
+        </activity>
+        
     </application>
     <uses-sdk android:minSdkVersion="3" />
 

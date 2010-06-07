@@ -19,8 +19,9 @@ public final class R {
         public static final int icon=0x7f020001;
     }
     public static final class id {
-        public static final int EMAIL=0x7f060001;
-        public static final int NAME=0x7f060000;
+        public static final int EMAIL=0x7f050002;
+        public static final int NAME=0x7f050001;
+        public static final int USER_LISTING_OPTION_MENU_NEW_USER=0x7f050000;
     }
     public static final class layout {
         public static final int splash_screen=0x7f030000;
@@ -28,24 +29,24 @@ public final class R {
         public static final int user_listing_one_user_view=0x7f030002;
     }
     public static final class string {
-        public static final int alertDialogHeadingError=0x7f050004;
+        public static final int alertDialogHeadingError=0x7f060004;
         /**  ==============================================================
     	Strings for shownOnAlertDialog 
     ================================================================== 
          */
-        public static final int alertDialogHeadingUnableToConnect=0x7f050002;
-        public static final int alertDialogMessageUnableToConnect=0x7f050003;
-        public static final int app_name=0x7f050000;
+        public static final int alertDialogHeadingUnableToConnect=0x7f060002;
+        public static final int alertDialogMessageUnableToConnect=0x7f060003;
+        public static final int app_name=0x7f060000;
         /**  ==============================================================
     	Strings for shownOnProgressDialog 
     ================================================================== 
          */
-        public static final int progressDialogMessageSplashScreenRetrievingUserListing=0x7f050005;
+        public static final int progressDialogMessageSplashScreenRetrievingUserListing=0x7f060005;
         /**  ==============================================================
     	Strings for shownOnToast 
     ================================================================== 
          */
-        public static final int toastMessageResponseHandlerIStreamIsNull=0x7f050006;
-        public static final int urlString=0x7f050001;
+        public static final int toastMessageResponseHandlerIStreamIsNull=0x7f060006;
+        public static final int urlString=0x7f060001;
     }
 }
