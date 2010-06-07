@@ -21,12 +21,12 @@ public class ClientSideValidation{
 	
 	//validateString
 	boolean validateString(String string){
-		
-		boolean isValid = false; 
-		
-		
-		isValid = true;
-	      
+		boolean isValid;
+		if(string == null || string.equalsIgnoreCase("")){
+			isValid = false; 
+		}else {
+			isValid = true;
+		} 
 		return isValid;
 	}//end of validateString
 	

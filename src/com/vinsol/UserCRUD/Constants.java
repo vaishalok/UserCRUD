@@ -13,6 +13,7 @@ public class Constants {
 	 *==============================================*/
 	public static final int USER_LISTING = 100;
 	public static final int USER_ADD_DONE = 101;
+	public static final int USER_EDIT_DONE = 102;
 	
 	
 		
@@ -28,4 +29,9 @@ public class Constants {
 	public static final String MODE_OF_PAGE = "MODE_OF_PAGE";
 	public static final int PAGE_ADD = 300;
 	public static final int PAGE_EDIT = 301;	
+	
+	/**=============================================
+	 * others
+	 *==============================================*/
+	public static final String POSITION_OF_USER_IN_LIST = "POSITION_OF_USER";
 }//end class Constants

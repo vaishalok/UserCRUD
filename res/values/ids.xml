@@ -1,3 +1,8 @@
 <resources>
 	<item name="USER_LISTING_OPTION_MENU_NEW_USER" type="id"></item>
+	
+	<item name="USER_LISTING_CONTEXT_MENU_SHOW_USER" type="id"></item>
+	<item name="USER_LISTING_CONTEXT_MENU_EDIT_USER" type="id"></item>
+	<item name="USER_LISTING_CONTEXT_MENU_DELETE_USER" type="id"></item>
+	
 </resources>

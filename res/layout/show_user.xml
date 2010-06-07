@@ -1,0 +1,70 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/white"
+	>
+	
+	<!-- =================== User Name ========================== -->
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Name:"
+		android:textStyle="bold"
+		android:textSize="17dip"
+		android:textColor="@color/black"
+		android:layout_marginLeft="10dip"
+		android:layout_marginTop="20dip"
+		>
+	</TextView>
+	
+	<TextView
+		android:id="@+id/show_user_text_view_user_name"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="15dip"
+		android:textColor="@color/black"
+		android:layout_marginLeft="10dip"
+		android:singleLine="true"
+		>
+	</TextView>
+	
+	<!-- =================== Email ========================== -->
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Email:"
+		android:textStyle="bold"
+		android:textSize="17dip"
+		android:textColor="@color/black"
+		android:layout_marginLeft="10dip"
+		android:layout_marginTop="20dip"
+		>
+	</TextView>
+	
+	<TextView
+		android:id="@+id/show_user_text_view_email"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="15dip"
+		android:textColor="@color/black"
+		android:layout_marginLeft="10dip"
+		android:singleLine="true"
+		>
+	</TextView>
+	
+	<!-- =================== edit Button ========================== -->
+	<Button
+		android:id="@+id/show_user_edit_button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Edit"
+		android:textSize="17dip"
+		android:textColor="@color/black"
+		android:layout_marginLeft="10dip"
+		android:layout_marginTop="20dip"
+		>
+	</Button>
+	
+</LinearLayout>

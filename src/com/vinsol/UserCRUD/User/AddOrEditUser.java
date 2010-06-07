@@ -23,7 +23,7 @@ import com.vinsol.UserCRUD.ShowAlertDialog;
 public class AddOrEditUser extends Activity implements OnClickListener {
 	
 	int modeOfPage;
-	int positionOfItemInListWhenEditing;
+	int positionOfUserInListWhenEditing;
 	
 	String idOfUserWhenEditing;
 	
@@ -52,8 +52,8 @@ public class AddOrEditUser extends Activity implements OnClickListener {
         
         if(modeOfPage == Constants.PAGE_EDIT){
 			
-        	//positionOfItemInListWhenEditing = 3edwd
-        	//fillEditTextsOfBodyForEdit();
+        	positionOfUserInListWhenEditing = getIntent().getIntExtra(Constants.POSITION_OF_USER_IN_LIST, 0);
+        	fillEditTextsOfBodyForEdit(positionOfUserInListWhenEditing);
 			
 			doneButton.setText("Edit");
 		}     		
@@ -62,11 +62,11 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 	/**========================================================================   
 	  * method fillEditTextsOfBodyForEdit()   
 	  *========================================================================*/   
-	void fillEditTextsOfBodyForEdit() {
+	void fillEditTextsOfBodyForEdit(int positionOfUserInList) {
 		
 		ArrayList<User> userArrayList = UserManager.getUserArrayList(); 
 		
-		User userForEdit = userArrayList.get(positionOfItemInListWhenEditing);
+		User userForEdit = userArrayList.get(positionOfUserInList);
 		
 		idOfUserWhenEditing = userForEdit.getId();
 		
@@ -90,18 +90,6 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 		}//end of Switch
 		
 	}//end method onClick 
-	
-	/**========================================================================   
-	  * method onKeyDown()   
-	  *========================================================================*/  
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event){
-	    if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-	    	new UserManager().showUserListing(this);
-	        return true;
-	    }
-	    return super.onKeyDown(keyCode, event);
-	}//end of onKeyDown	
 	
 	/**========================================================================   
 	  * method doneButtonHandler   
@@ -148,7 +136,8 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 		requestSentToServerAsyncTaskObject.execute(urlString);
 		
 		//after this response of server will be handled by ResponseHandler 
-	}
+	}//end method sendAddRequestToServer
+	
 	
 	/**========================================================================   
 	  * method sendEditRequestToServer   
@@ -163,5 +152,19 @@ public class AddOrEditUser extends Activity implements OnClickListener {
 		
 		//after this response of server will be handled by ResponseHandler 
 	}
+	
+	/**========================================================================   
+	  * method onKeyDown()   
+	  *========================================================================*/  
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event){
+	    if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+	    	new UserManager().showUserListing(this);
+	        return true;
+	    }
+	    return super.onKeyDown(keyCode, event);
+	}//end of onKeyDown	
+	
+
 		
 }//end class AddOrEditUser

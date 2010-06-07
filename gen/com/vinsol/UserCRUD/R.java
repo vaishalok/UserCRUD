@@ -19,18 +19,25 @@ public final class R {
         public static final int icon=0x7f020001;
     }
     public static final class id {
-        public static final int EMAIL=0x7f050005;
-        public static final int NAME=0x7f050004;
+        public static final int EMAIL=0x7f05000b;
+        public static final int NAME=0x7f05000a;
+        public static final int USER_LISTING_CONTEXT_MENU_DELETE_USER=0x7f050003;
+        public static final int USER_LISTING_CONTEXT_MENU_EDIT_USER=0x7f050002;
+        public static final int USER_LISTING_CONTEXT_MENU_SHOW_USER=0x7f050001;
         public static final int USER_LISTING_OPTION_MENU_NEW_USER=0x7f050000;
-        public static final int add_or_edit_user_button_done=0x7f050003;
-        public static final int add_or_edit_user_edit_text_email=0x7f050002;
-        public static final int add_or_edit_user_edit_text_user_name=0x7f050001;
+        public static final int add_or_edit_user_button_done=0x7f050006;
+        public static final int add_or_edit_user_edit_text_email=0x7f050005;
+        public static final int add_or_edit_user_edit_text_user_name=0x7f050004;
+        public static final int show_user_edit_button=0x7f050009;
+        public static final int show_user_text_view_email=0x7f050008;
+        public static final int show_user_text_view_user_name=0x7f050007;
     }
     public static final class layout {
         public static final int add_or_edit_user=0x7f030000;
-        public static final int splash_screen=0x7f030001;
-        public static final int user_listing=0x7f030002;
-        public static final int user_listing_one_user_view=0x7f030003;
+        public static final int show_user=0x7f030001;
+        public static final int splash_screen=0x7f030002;
+        public static final int user_listing=0x7f030003;
+        public static final int user_listing_one_user_view=0x7f030004;
     }
     public static final class string {
         public static final int alertDialogHeadingError=0x7f060006;
