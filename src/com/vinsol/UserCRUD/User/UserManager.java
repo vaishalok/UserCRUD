@@ -69,4 +69,15 @@ public class UserManager {
 		ctx.startActivity(intent);
 	}//end method showUserListing
 	
+	
+	/**===============================================================   
+	  * method gotoAddUserPage   
+	  * ==============================================================*/   
+	public void gotoAddUserPage(Context ctx){
+		Intent intent = new Intent(ctx, AddOrEditUser.class);
+		intent.putExtra(Constants.MODE_OF_PAGE, Constants.PAGE_ADD);
+		((Activity)ctx).finish();
+		ctx.startActivity(intent);
+	}//end method gotoAddUserPage
+    
 }//end class UserManager

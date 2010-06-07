@@ -1,0 +1,76 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/white"
+	>
+	
+	<!-- =================== User Name ========================== -->
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Name:"
+		android:textStyle="bold"
+		android:textSize="17dip"
+		android:textColor="@color/black"
+		android:layout_marginLeft="10dip"
+		android:layout_marginTop="20dip"
+		>
+	</TextView>
+	
+	<EditText
+		android:id="@+id/add_or_edit_user_edit_text_user_name"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:hint="Name"
+		android:textSize="15dip"
+		android:textColor="@color/black"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="50dip"
+		android:singleLine="true"
+		android:inputType="text"
+		>
+	</EditText>
+	
+	<!-- =================== Email ========================== -->
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Email:"
+		android:textStyle="bold"
+		android:textSize="17dip"
+		android:textColor="@color/black"
+		android:layout_marginLeft="10dip"
+		android:layout_marginTop="20dip"
+		>
+	</TextView>
+	
+	<EditText
+		android:id="@+id/add_or_edit_user_edit_text_email"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:hint="Email"
+		android:textSize="15dip"
+		android:textColor="@color/black"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="50dip"
+		android:singleLine="true"
+		android:inputType="text|textEmailAddress"		
+		>
+	</EditText>
+	
+	<!-- =================== Done Button ========================== -->
+	<Button
+		android:id="@+id/add_or_edit_user_button_done"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Create"
+		android:textSize="17dip"
+		android:textColor="@color/black"
+		android:layout_marginLeft="10dip"
+		android:layout_marginTop="20dip"
+		>
+	</Button>
+	
+</LinearLayout>

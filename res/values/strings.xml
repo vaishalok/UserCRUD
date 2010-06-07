@@ -11,12 +11,16 @@
 	<string name="alertDialogHeadingUnableToConnect">"Unable To Connect"</string>
 	<string name="alertDialogMessageUnableToConnect">"Could not Connect to Server "</string>
 	
+	<string name="alertDialogHeadingFormInvalid">"Invalid"</string>
+	<string name="alertDialogMessageFormInvalid">"Invalid Form Data "</string>
+	
 	<string name="alertDialogHeadingError">"Error"</string>
 	
 	<!-- ==============================================================
     	Strings for shownOnProgressDialog 
     ================================================================== -->
 	<string name="progressDialogMessageSplashScreenRetrievingUserListing">"Retrieving User Listing ... "</string>
+	<string name="progressDialogMessageAddOrEditUserSavingUser">"Saving User ... "</string>
 	
 	
 	<!-- ==============================================================

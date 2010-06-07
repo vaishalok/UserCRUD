@@ -5,7 +5,6 @@ import java.util.HashMap;
 
 import android.app.ListActivity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -89,10 +88,8 @@ public class UserListing extends ListActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    case R.id.USER_LISTING_OPTION_MENU_NEW_USER:
-	        Intent intent = new Intent(this, AddOrEditUser.class);
-	        finish();
-	        startActivity(intent);
-	        return true;
+	        new UserManager().gotoAddUserPage(this);
+	    	return true;
 	    }
 	    return false;
 	}//end method onOptionsItemSelected

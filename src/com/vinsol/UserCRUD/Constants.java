@@ -12,17 +12,20 @@ public class Constants {
 	 * responseHandleBy
 	 *==============================================*/
 	public static final int USER_LISTING = 100;
+	public static final int USER_ADD_DONE = 101;
 	
 	
 		
 	/**=============================================
 	 * creatingXMLParser for class
 	 *==============================================*/
-	public static final int XML_PARSER_FOR_USERS = 1000;
-	static final int XML_PARSER_FOR_ERRORS = 1001;
+	public static final int XML_PARSER_FOR_USERS = 200;
+	static final int XML_PARSER_FOR_ERRORS = 201;
 	
-	//modeOfPage 
-	public static final int PAGE_SHOW_ONE = 7000;
-	public static final int PAGE_ADD = 7001;
-	public static final int PAGE_EDIT = 7002;	
+	/**=============================================
+	 * mode of page
+	 *==============================================*/
+	public static final String MODE_OF_PAGE = "MODE_OF_PAGE";
+	public static final int PAGE_ADD = 300;
+	public static final int PAGE_EDIT = 301;	
 }//end class Constants
