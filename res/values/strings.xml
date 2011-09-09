@@ -28,6 +28,4 @@
     	Strings for shownOnToast 
     ================================================================== -->
 	<string name="toastMessageResponseHandlerIStreamIsNull">"Response from server is null "</string>
-    
-    
 </resources>
